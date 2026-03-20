@@ -1,0 +1,23 @@
+server:
+  port: 8083
+  servlet:
+    context-path: /api # 设置项目上下文路径
+
+spring:
+  application:
+    name: week03
+
+app:
+  app-name: 企业后台管理系统
+  version: 1.0.1
+  description: 基于 Spring Boot 3.5.11 构建
+  author:
+    name: tt
+    website: https://github.com/tt
+    email: 123456@qq.com
+  features:
+    - 基于 Spring Boot 3.5.11 构建
+    - 集成 Spring Security
+    - 集成 Spring Data JPA
+    - 集成 Spring Data Redis
+  published: false

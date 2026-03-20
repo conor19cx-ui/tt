@@ -1,0 +1,5 @@
+org\example\week03\Week03Application.class
+org\example\week03\config\AppConfig.class
+org\example\week03\config\AppConfig$Author.class
+org\example\week03\common\Result.class
+org\example\week03\controller\BaseConfigController.class
