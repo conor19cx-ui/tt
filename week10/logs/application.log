@@ -1,0 +1,661 @@
+2026-05-08 15:04:46.258 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 39556 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 15:04:46.259 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 15:04:46.348 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 15:04:46.348 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 15:04:46.348 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 15:04:46.360 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 99 ms
+2026-05-08 15:04:46.364 [restartedMain] INFO  o.example.week10.filter.TestFilter - 测试过滤器初始化完成
+2026-05-08 15:04:46.364 [restartedMain] INFO  o.example.week10.filter.CustomFilter - CustomFilter 过滤器初始化
+2026-05-08 15:04:46.399 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 15:04:46.400 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.172 seconds (process running for 1525.82)
+2026-05-08 15:04:46.401 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-05-08 15:11:32.178 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-05-08 15:11:32.178 [Thread-5] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 15:11:32.308 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 15:11:32.310 [Thread-5] INFO  o.example.week10.filter.TestFilter - 测试过滤器销毁完成
+2026-05-08 15:11:32.310 [Thread-5] INFO  o.example.week10.filter.CustomFilter - CustomFilter 过滤器销毁
+2026-05-08 15:11:32.355 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 39556 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 15:11:32.355 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 15:11:32.355 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 15:11:32.415 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 15:11:32.416 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 15:11:32.416 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 15:11:32.422 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 66 ms
+2026-05-08 15:11:32.426 [restartedMain] INFO  o.example.week10.filter.TestFilter - 测试过滤器初始化完成
+2026-05-08 15:11:32.426 [restartedMain] INFO  o.example.week10.filter.CustomFilter - CustomFilter 过滤器初始化
+2026-05-08 15:11:32.454 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 15:11:32.456 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.113 seconds (process running for 1931.875)
+2026-05-08 15:14:47.120 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+2026-05-08 15:14:47.121 [Thread-9] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 15:14:47.246 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 15:14:47.249 [Thread-9] INFO  o.example.week10.filter.TestFilter - 测试过滤器销毁完成
+2026-05-08 15:14:47.249 [Thread-9] INFO  o.example.week10.filter.CustomFilter - CustomFilter 过滤器销毁
+2026-05-08 15:14:47.297 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 39556 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 15:14:47.297 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 15:14:47.297 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 15:14:47.351 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 15:14:47.352 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 15:14:47.352 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 15:14:47.358 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 59 ms
+2026-05-08 15:14:47.361 [restartedMain] INFO  o.example.week10.filter.TestFilter - 测试过滤器初始化完成
+2026-05-08 15:14:47.361 [restartedMain] INFO  o.example.week10.filter.CustomFilter - CustomFilter 过滤器初始化
+2026-05-08 15:14:47.385 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 15:14:47.386 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.099 seconds (process running for 2126.806)
+2026-05-08 15:14:47.386 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-05-08 15:18:16.088 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-05-08 15:18:16.089 [Thread-13] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 15:18:16.218 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 15:18:16.218 [Thread-13] INFO  o.example.week10.filter.TestFilter - 测试过滤器销毁完成
+2026-05-08 15:18:16.218 [Thread-13] INFO  o.example.week10.filter.CustomFilter - CustomFilter 过滤器销毁
+2026-05-08 15:18:16.269 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 39556 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 15:18:16.269 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 15:18:16.269 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 15:18:16.327 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 15:18:16.327 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 15:18:16.327 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 15:18:16.335 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 65 ms
+2026-05-08 15:18:16.338 [restartedMain] INFO  o.example.week10.filter.TestFilter - 测试过滤器初始化完成
+2026-05-08 15:18:16.338 [restartedMain] INFO  o.example.week10.filter.CustomFilter - CustomFilter 过滤器初始化
+2026-05-08 15:18:16.366 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 15:18:16.367 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.11 seconds (process running for 2335.787)
+2026-05-08 15:18:16.367 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-05-08 15:18:17.787 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-05-08 15:18:17.787 [Thread-17] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 15:18:17.908 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 15:18:17.910 [Thread-17] INFO  o.example.week10.filter.TestFilter - 测试过滤器销毁完成
+2026-05-08 15:18:17.911 [Thread-17] INFO  o.example.week10.filter.CustomFilter - CustomFilter 过滤器销毁
+2026-05-08 15:18:17.952 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 39556 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 15:18:17.952 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 15:18:17.952 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 15:18:18.001 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 15:18:18.001 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 15:18:18.001 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 15:18:18.007 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 54 ms
+2026-05-08 15:18:18.010 [restartedMain] INFO  o.example.week10.filter.TestFilter - 测试过滤器初始化完成
+2026-05-08 15:18:18.011 [restartedMain] INFO  o.example.week10.filter.CustomFilter - CustomFilter 过滤器初始化
+2026-05-08 15:18:18.047 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 15:18:18.048 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.104 seconds (process running for 2337.468)
+2026-05-08 15:18:18.048 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-05-08 15:18:24.514 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-05-08 15:18:24.515 [Thread-21] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 15:18:24.644 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 15:18:24.645 [Thread-21] INFO  o.example.week10.filter.TestFilter - 测试过滤器销毁完成
+2026-05-08 15:18:24.646 [Thread-21] INFO  o.example.week10.filter.CustomFilter - CustomFilter 过滤器销毁
+2026-05-08 15:18:24.696 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 39556 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 15:18:24.696 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 15:18:24.696 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 15:18:24.749 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 15:18:24.750 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 15:18:24.750 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 15:18:24.755 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 56 ms
+2026-05-08 15:18:24.758 [restartedMain] INFO  o.example.week10.filter.TestFilter - 测试过滤器初始化完成
+2026-05-08 15:18:24.758 [restartedMain] INFO  o.example.week10.filter.CustomFilter - CustomFilter 过滤器初始化
+2026-05-08 15:18:24.780 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 15:18:24.781 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.097 seconds (process running for 2344.201)
+2026-05-08 15:18:24.782 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-05-08 15:18:42.773 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 15:18:42.890 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 15:18:42.891 [SpringApplicationShutdownHook] INFO  o.example.week10.filter.TestFilter - 测试过滤器销毁完成
+2026-05-08 15:18:42.891 [SpringApplicationShutdownHook] INFO  o.example.week10.filter.CustomFilter - CustomFilter 过滤器销毁
+2026-05-08 15:18:45.346 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 4172 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 15:18:45.349 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 15:18:45.349 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 15:18:45.372 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-08 15:18:45.372 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-08 15:18:45.777 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 15:18:45.784 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 15:18:45.785 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 15:18:45.804 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 432 ms
+2026-05-08 15:18:45.825 [restartedMain] INFO  o.example.week10.filter.AuthFilter - ==== 认证过滤器 AuthFilter 初始化 ====
+2026-05-08 15:18:45.825 [restartedMain] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 初始化 ====
+2026-05-08 15:18:45.966 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 15:18:45.970 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.87 seconds (process running for 1.227)
+2026-05-08 15:25:08.920 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-05-08 15:25:08.924 [Thread-1] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 15:25:09.062 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 15:25:09.065 [Thread-1] INFO  o.example.week10.filter.AuthFilter - ==== 认证过滤器 AuthFilter 销毁 ====
+2026-05-08 15:25:09.065 [Thread-1] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 销毁 ====
+2026-05-08 15:25:09.100 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 4172 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 15:25:09.100 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 15:25:09.100 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 15:25:09.190 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 15:25:09.191 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 15:25:09.191 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 15:25:09.201 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 99 ms
+2026-05-08 15:25:09.205 [restartedMain] INFO  o.example.week10.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 15:25:09.206 [restartedMain] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 初始化 ====
+2026-05-08 15:25:09.246 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 15:25:09.247 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.162 seconds (process running for 384.504)
+2026-05-08 15:25:09.248 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-05-08 15:25:10.661 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-05-08 15:25:10.661 [Thread-5] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 15:25:10.788 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 15:25:10.789 [Thread-5] INFO  o.example.week10.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 15:25:10.789 [Thread-5] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 销毁 ====
+2026-05-08 15:25:10.824 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 4172 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 15:25:10.824 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 15:25:10.824 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 15:25:10.882 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 15:25:10.883 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 15:25:10.883 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 15:25:10.888 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 63 ms
+2026-05-08 15:25:10.891 [restartedMain] INFO  o.example.week10.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 15:25:10.892 [restartedMain] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 初始化 ====
+2026-05-08 15:25:10.918 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 15:25:10.919 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.105 seconds (process running for 386.177)
+2026-05-08 15:25:10.920 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-05-08 15:25:16.795 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-05-08 15:25:16.796 [Thread-9] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 15:25:16.918 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 15:25:16.920 [Thread-9] INFO  o.example.week10.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 15:25:16.920 [Thread-9] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 销毁 ====
+2026-05-08 15:25:16.965 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 4172 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 15:25:16.965 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 15:25:16.965 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 15:25:17.023 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 15:25:17.024 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 15:25:17.024 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 15:25:17.030 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 64 ms
+2026-05-08 15:25:17.034 [restartedMain] INFO  o.example.week10.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 15:25:17.034 [restartedMain] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 初始化 ====
+2026-05-08 15:25:17.061 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 15:25:17.062 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.108 seconds (process running for 392.32)
+2026-05-08 15:25:17.063 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-05-08 15:29:49.273 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-08 15:29:49.273 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-08 15:29:49.274 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-05-08 15:29:49.277 [http-nio-8080-exec-1] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 15:29:49.278 [http-nio-8080-exec-1] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：ok
+2026-05-08 15:29:49.278 [http-nio-8080-exec-1] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】Token校验通过，放行请求
+2026-05-08 15:29:49.305 [http-nio-8080-exec-1] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 15:30:53.322 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 15:30:53.450 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 15:30:53.451 [SpringApplicationShutdownHook] INFO  o.example.week10.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 15:30:53.451 [SpringApplicationShutdownHook] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 销毁 ====
+2026-05-08 15:30:54.691 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 6580 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 15:30:54.693 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 15:30:54.694 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 15:30:54.717 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-08 15:30:54.717 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-08 15:30:55.123 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 15:30:55.130 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 15:30:55.130 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 15:30:55.149 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 431 ms
+2026-05-08 15:30:55.170 [restartedMain] INFO  o.example.week10.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 15:30:55.171 [restartedMain] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 初始化 ====
+2026-05-08 15:30:55.321 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 15:30:55.324 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.887 seconds (process running for 1.26)
+2026-05-08 15:31:15.274 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-08 15:31:15.274 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-08 15:31:15.275 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-05-08 15:31:15.279 [http-nio-8080-exec-1] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 15:31:15.279 [http-nio-8080-exec-1] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：ok
+2026-05-08 15:31:15.279 [http-nio-8080-exec-1] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】Token校验通过，放行请求
+2026-05-08 15:31:15.305 [http-nio-8080-exec-1] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 15:31:23.415 [http-nio-8080-exec-2] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 15:31:23.415 [http-nio-8080-exec-2] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：ok
+2026-05-08 15:31:23.416 [http-nio-8080-exec-2] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】Token校验通过，放行请求
+2026-05-08 15:31:23.416 [http-nio-8080-exec-2] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 15:32:31.971 [http-nio-8080-exec-8] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 15:32:31.971 [http-nio-8080-exec-8] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：null
+2026-05-08 15:32:31.971 [http-nio-8080-exec-8] WARN  o.example.week10.filter.AuthFilter - 【认证过滤器】Token无效，拒绝访问
+2026-05-08 15:32:31.972 [http-nio-8080-exec-8] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 15:34:38.775 [http-nio-8080-exec-3] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 15:34:38.776 [http-nio-8080-exec-3] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：ok
+2026-05-08 15:34:38.776 [http-nio-8080-exec-3] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】Token校验通过，放行请求
+2026-05-08 15:34:38.777 [http-nio-8080-exec-3] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 15:35:29.834 [http-nio-8080-exec-7] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 15:35:29.834 [http-nio-8080-exec-7] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：null
+2026-05-08 15:35:29.835 [http-nio-8080-exec-7] WARN  o.example.week10.filter.AuthFilter - 【认证过滤器】Token无效，拒绝访问
+2026-05-08 15:35:29.835 [http-nio-8080-exec-7] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 15:36:43.851 [http-nio-8080-exec-9] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 15:36:43.851 [http-nio-8080-exec-9] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：123
+2026-05-08 15:36:43.851 [http-nio-8080-exec-9] WARN  o.example.week10.filter.AuthFilter - 【认证过滤器】Token无效，拒绝访问
+2026-05-08 15:36:43.851 [http-nio-8080-exec-9] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 15:39:56.747 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 15:39:56.901 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 15:39:56.906 [SpringApplicationShutdownHook] INFO  o.example.week10.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 15:39:56.906 [SpringApplicationShutdownHook] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 销毁 ====
+2026-05-08 15:39:58.342 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 31020 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 15:39:58.344 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 15:39:58.345 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 15:39:58.367 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-08 15:39:58.367 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-08 15:39:58.779 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 15:39:58.790 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 15:39:58.791 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 15:39:58.811 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 444 ms
+2026-05-08 15:39:58.833 [restartedMain] INFO  o.example.week10.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 15:39:58.833 [restartedMain] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 初始化 ====
+2026-05-08 15:39:58.979 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 15:39:58.983 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.893 seconds (process running for 1.234)
+2026-05-08 15:41:02.881 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-08 15:41:02.881 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-08 15:41:02.882 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-05-08 15:41:02.884 [http-nio-8080-exec-1] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 15:41:02.884 [http-nio-8080-exec-1] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：ok
+2026-05-08 15:41:02.884 [http-nio-8080-exec-1] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】Token校验通过，放行请求
+2026-05-08 15:41:02.903 [http-nio-8080-exec-1] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 15:43:02.003 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 15:43:02.130 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 15:43:02.133 [SpringApplicationShutdownHook] INFO  o.example.week10.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 15:43:02.134 [SpringApplicationShutdownHook] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 销毁 ====
+2026-05-08 15:43:03.347 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 5172 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 15:43:03.349 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 15:43:03.349 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 15:43:03.374 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-08 15:43:03.374 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-08 15:43:03.819 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 15:43:03.828 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 15:43:03.828 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 15:43:03.846 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 471 ms
+2026-05-08 15:43:03.868 [restartedMain] INFO  o.example.week10.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 15:43:03.868 [restartedMain] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 初始化 ====
+2026-05-08 15:43:04.015 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 15:43:04.018 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.949 seconds (process running for 1.285)
+2026-05-08 15:43:07.246 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-08 15:43:07.246 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-08 15:43:07.247 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-05-08 15:43:07.249 [http-nio-8080-exec-1] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 15:43:07.249 [http-nio-8080-exec-1] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：ok
+2026-05-08 15:43:07.249 [http-nio-8080-exec-1] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】Token校验通过，放行请求
+2026-05-08 15:43:07.269 [http-nio-8080-exec-1] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 15:43:13.431 [http-nio-8080-exec-4] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 15:43:13.431 [http-nio-8080-exec-4] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：123
+2026-05-08 15:43:13.431 [http-nio-8080-exec-4] WARN  o.example.week10.filter.AuthFilter - 【认证过滤器】Token无效，拒绝访问
+2026-05-08 15:43:13.432 [http-nio-8080-exec-4] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 15:43:18.457 [http-nio-8080-exec-3] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 15:43:18.458 [http-nio-8080-exec-3] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：null
+2026-05-08 15:43:18.458 [http-nio-8080-exec-3] WARN  o.example.week10.filter.AuthFilter - 【认证过滤器】Token无效，拒绝访问
+2026-05-08 15:43:18.458 [http-nio-8080-exec-3] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 15:44:35.691 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 15:44:35.845 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 15:44:35.848 [SpringApplicationShutdownHook] INFO  o.example.week10.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 15:44:35.848 [SpringApplicationShutdownHook] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 销毁 ====
+2026-05-08 15:44:37.271 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 30508 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 15:44:37.272 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 15:44:37.273 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 15:44:37.298 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-08 15:44:37.298 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-08 15:44:37.723 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 15:44:37.732 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 15:44:37.732 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 15:44:37.751 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 452 ms
+2026-05-08 15:44:37.774 [restartedMain] INFO  o.example.week10.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 15:44:37.774 [restartedMain] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 初始化 ====
+2026-05-08 15:44:37.916 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 15:44:37.919 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.915 seconds (process running for 1.298)
+2026-05-08 15:44:52.429 [http-nio-8080-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-08 15:44:52.429 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-08 15:44:52.429 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-05-08 15:44:52.431 [http-nio-8080-exec-3] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 15:44:52.432 [http-nio-8080-exec-3] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：ok
+2026-05-08 15:44:52.432 [http-nio-8080-exec-3] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】Token校验通过，放行请求
+2026-05-08 15:44:52.454 [http-nio-8080-exec-3] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 15:44:58.063 [http-nio-8080-exec-7] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 15:44:58.063 [http-nio-8080-exec-7] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：124
+2026-05-08 15:44:58.063 [http-nio-8080-exec-7] WARN  o.example.week10.filter.AuthFilter - 【认证过滤器】Token无效，拒绝访问
+2026-05-08 15:44:58.064 [http-nio-8080-exec-7] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 15:45:02.335 [http-nio-8080-exec-4] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 15:45:02.336 [http-nio-8080-exec-4] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：123
+2026-05-08 15:45:02.336 [http-nio-8080-exec-4] WARN  o.example.week10.filter.AuthFilter - 【认证过滤器】Token无效，拒绝访问
+2026-05-08 15:45:02.336 [http-nio-8080-exec-4] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 15:45:06.920 [http-nio-8080-exec-10] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 15:45:06.921 [http-nio-8080-exec-10] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：null
+2026-05-08 15:45:06.921 [http-nio-8080-exec-10] WARN  o.example.week10.filter.AuthFilter - 【认证过滤器】Token无效，拒绝访问
+2026-05-08 15:45:06.921 [http-nio-8080-exec-10] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 15:45:09.473 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 15:45:09.602 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 15:45:09.605 [SpringApplicationShutdownHook] INFO  o.example.week10.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 15:45:09.605 [SpringApplicationShutdownHook] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 销毁 ====
+2026-05-08 15:58:47.559 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 36668 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 15:58:47.561 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 15:58:47.561 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 15:58:47.587 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-08 15:58:47.587 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-08 15:58:48.037 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 15:58:48.044 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 15:58:48.045 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 15:58:48.064 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 477 ms
+2026-05-08 15:58:48.087 [restartedMain] INFO  o.example.week10.filter.CorsFilter - CorsFilter 跨域过滤器初始化
+2026-05-08 15:58:48.087 [restartedMain] INFO  o.example.week10.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 15:58:48.087 [restartedMain] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 初始化 ====
+2026-05-08 15:58:48.239 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 15:58:48.243 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.944 seconds (process running for 1.291)
+2026-05-08 16:00:36.918 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-08 16:00:36.918 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-08 16:00:36.921 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-05-08 16:00:36.926 [http-nio-8080-exec-2] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 16:00:36.928 [http-nio-8080-exec-2] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：ok
+2026-05-08 16:00:36.928 [http-nio-8080-exec-2] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】Token校验通过，放行请求
+2026-05-08 16:00:36.947 [http-nio-8080-exec-2] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 16:02:35.986 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 16:02:36.115 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 16:02:36.118 [SpringApplicationShutdownHook] INFO  o.example.week10.filter.CorsFilter - CorsFilter 跨域过滤器销毁
+2026-05-08 16:02:36.119 [SpringApplicationShutdownHook] INFO  o.example.week10.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 16:02:36.119 [SpringApplicationShutdownHook] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 销毁 ====
+2026-05-08 16:02:37.326 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 41056 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 16:02:37.327 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 16:02:37.328 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 16:02:37.355 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-08 16:02:37.355 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-08 16:02:37.780 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 16:02:37.787 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 16:02:37.787 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 16:02:37.806 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 451 ms
+2026-05-08 16:02:37.828 [restartedMain] INFO  o.example.week10.filter.CorsFilter - CorsFilter 跨域过滤器初始化
+2026-05-08 16:02:37.829 [restartedMain] INFO  o.example.week10.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 16:02:37.829 [restartedMain] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 初始化 ====
+2026-05-08 16:02:37.971 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 16:02:37.974 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.927 seconds (process running for 1.282)
+2026-05-08 16:02:48.243 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-08 16:02:48.243 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-08 16:02:48.244 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-05-08 16:02:48.249 [http-nio-8080-exec-2] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 16:02:48.249 [http-nio-8080-exec-2] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：ok
+2026-05-08 16:02:48.249 [http-nio-8080-exec-2] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】Token校验通过，放行请求
+2026-05-08 16:02:48.269 [http-nio-8080-exec-2] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 16:02:50.860 [http-nio-8080-exec-10] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 16:02:50.860 [http-nio-8080-exec-10] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：ok
+2026-05-08 16:02:50.860 [http-nio-8080-exec-10] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】Token校验通过，放行请求
+2026-05-08 16:02:50.861 [http-nio-8080-exec-10] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 16:02:51.037 [http-nio-8080-exec-5] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 16:02:51.037 [http-nio-8080-exec-5] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：ok
+2026-05-08 16:02:51.037 [http-nio-8080-exec-5] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】Token校验通过，放行请求
+2026-05-08 16:02:51.037 [http-nio-8080-exec-5] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 16:02:51.201 [http-nio-8080-exec-6] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 16:02:51.202 [http-nio-8080-exec-6] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：ok
+2026-05-08 16:02:51.202 [http-nio-8080-exec-6] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】Token校验通过，放行请求
+2026-05-08 16:02:51.203 [http-nio-8080-exec-6] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 16:02:51.364 [http-nio-8080-exec-7] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 16:02:51.364 [http-nio-8080-exec-7] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：ok
+2026-05-08 16:02:51.365 [http-nio-8080-exec-7] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】Token校验通过，放行请求
+2026-05-08 16:02:51.365 [http-nio-8080-exec-7] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 16:05:50.227 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-05-08 16:05:50.230 [Thread-1] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 16:05:50.375 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 16:05:50.379 [Thread-1] INFO  o.example.week10.filter.CorsFilter - CorsFilter 跨域过滤器销毁
+2026-05-08 16:05:50.379 [Thread-1] INFO  o.example.week10.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 16:05:50.379 [Thread-1] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 销毁 ====
+2026-05-08 16:05:50.408 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 41056 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 16:05:50.409 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 16:05:50.409 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 16:05:50.497 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 16:05:50.497 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 16:05:50.498 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 16:05:50.507 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 96 ms
+2026-05-08 16:05:50.511 [restartedMain] INFO  o.example.week10.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 16:05:50.511 [restartedMain] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 初始化 ====
+2026-05-08 16:05:50.549 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 16:05:50.552 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.157 seconds (process running for 193.86)
+2026-05-08 16:05:50.553 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-05-08 16:05:56.801 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 16:05:56.937 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 16:05:56.939 [SpringApplicationShutdownHook] INFO  o.example.week10.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 16:05:56.939 [SpringApplicationShutdownHook] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 销毁 ====
+2026-05-08 16:05:58.308 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 32324 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 16:05:58.309 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 16:05:58.310 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 16:05:58.335 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-08 16:05:58.335 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-08 16:05:58.755 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 16:05:58.765 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 16:05:58.765 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 16:05:58.784 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 449 ms
+2026-05-08 16:05:58.806 [restartedMain] INFO  o.example.week10.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 16:05:58.806 [restartedMain] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 初始化 ====
+2026-05-08 16:05:58.955 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 16:05:58.959 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.911 seconds (process running for 1.288)
+2026-05-08 16:06:03.542 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-08 16:06:03.543 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-08 16:06:03.544 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-05-08 16:06:03.546 [http-nio-8080-exec-2] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 16:06:03.547 [http-nio-8080-exec-2] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：ok
+2026-05-08 16:06:03.547 [http-nio-8080-exec-2] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】Token校验通过，放行请求
+2026-05-08 16:06:03.567 [http-nio-8080-exec-2] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 16:06:04.109 [http-nio-8080-exec-3] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 16:06:04.109 [http-nio-8080-exec-3] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：ok
+2026-05-08 16:06:04.109 [http-nio-8080-exec-3] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】Token校验通过，放行请求
+2026-05-08 16:06:04.109 [http-nio-8080-exec-3] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 16:06:04.263 [http-nio-8080-exec-1] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 16:06:04.263 [http-nio-8080-exec-1] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：ok
+2026-05-08 16:06:04.263 [http-nio-8080-exec-1] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】Token校验通过，放行请求
+2026-05-08 16:06:04.264 [http-nio-8080-exec-1] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 16:06:05.395 [http-nio-8080-exec-4] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 16:06:05.395 [http-nio-8080-exec-4] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：ok
+2026-05-08 16:06:05.395 [http-nio-8080-exec-4] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】Token校验通过，放行请求
+2026-05-08 16:06:05.396 [http-nio-8080-exec-4] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 16:06:05.543 [http-nio-8080-exec-5] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 16:06:05.543 [http-nio-8080-exec-5] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：ok
+2026-05-08 16:06:05.543 [http-nio-8080-exec-5] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】Token校验通过，放行请求
+2026-05-08 16:06:05.544 [http-nio-8080-exec-5] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 16:06:19.110 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 16:06:19.236 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 16:06:19.240 [SpringApplicationShutdownHook] INFO  o.example.week10.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 16:06:19.240 [SpringApplicationShutdownHook] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 销毁 ====
+2026-05-08 16:06:21.666 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 18332 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 16:06:21.667 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 16:06:21.667 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 16:06:21.691 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-08 16:06:21.691 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-08 16:06:22.091 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 16:06:22.098 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 16:06:22.098 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 16:06:22.121 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 429 ms
+2026-05-08 16:06:22.143 [restartedMain] INFO  o.example.week10.filter.CorsFilter - CorsFilter 跨域过滤器初始化
+2026-05-08 16:06:22.143 [restartedMain] INFO  o.example.week10.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 16:06:22.143 [restartedMain] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 初始化 ====
+2026-05-08 16:06:22.291 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 16:06:22.294 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.88 seconds (process running for 1.229)
+2026-05-08 16:06:26.368 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-08 16:06:26.368 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-08 16:06:26.369 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-05-08 16:06:26.371 [http-nio-8080-exec-1] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 16:06:26.371 [http-nio-8080-exec-1] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：ok
+2026-05-08 16:06:26.371 [http-nio-8080-exec-1] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】Token校验通过，放行请求
+2026-05-08 16:06:26.391 [http-nio-8080-exec-1] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 16:06:26.760 [http-nio-8080-exec-2] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 16:06:26.760 [http-nio-8080-exec-2] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：ok
+2026-05-08 16:06:26.760 [http-nio-8080-exec-2] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】Token校验通过，放行请求
+2026-05-08 16:06:26.761 [http-nio-8080-exec-2] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 16:06:26.910 [http-nio-8080-exec-3] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 16:06:26.911 [http-nio-8080-exec-3] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：ok
+2026-05-08 16:06:26.911 [http-nio-8080-exec-3] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】Token校验通过，放行请求
+2026-05-08 16:06:26.912 [http-nio-8080-exec-3] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 16:06:27.079 [http-nio-8080-exec-6] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 16:06:27.079 [http-nio-8080-exec-6] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：ok
+2026-05-08 16:06:27.079 [http-nio-8080-exec-6] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】Token校验通过，放行请求
+2026-05-08 16:06:27.081 [http-nio-8080-exec-6] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 16:06:27.228 [http-nio-8080-exec-8] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求路径:/api/test 客户端IP:127.0.0.1
+2026-05-08 16:06:27.229 [http-nio-8080-exec-8] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】收到请求头Authorization：ok
+2026-05-08 16:06:27.229 [http-nio-8080-exec-8] INFO  o.example.week10.filter.AuthFilter - 【认证过滤器】Token校验通过，放行请求
+2026-05-08 16:06:27.230 [http-nio-8080-exec-8] INFO  org.example.week10.filter.LogFilter - 【日志过滤器】请求处理完毕，返回响应
+2026-05-08 16:06:30.772 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-05-08 16:06:30.775 [Thread-1] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 16:06:30.945 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 16:06:30.952 [Thread-1] INFO  o.example.week10.filter.CorsFilter - CorsFilter 跨域过滤器销毁
+2026-05-08 16:06:30.952 [Thread-1] INFO  o.example.week10.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 16:06:30.952 [Thread-1] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 销毁 ====
+2026-05-08 16:06:30.992 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 18332 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 16:06:30.992 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 16:06:30.992 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 16:06:31.090 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 16:06:31.090 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 16:06:31.091 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 16:06:31.102 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 108 ms
+2026-05-08 16:06:31.106 [restartedMain] INFO  o.example.week10.filter.CorsFilter - CorsFilter 跨域过滤器初始化
+2026-05-08 16:06:31.106 [restartedMain] INFO  o.example.week10.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 16:06:31.106 [restartedMain] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 初始化 ====
+2026-05-08 16:06:31.146 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 16:06:31.148 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.176 seconds (process running for 10.083)
+2026-05-08 16:06:31.149 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-05-08 16:06:32.565 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-05-08 16:06:32.565 [Thread-5] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 16:06:32.691 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 16:06:32.693 [Thread-5] INFO  o.example.week10.filter.CorsFilter - CorsFilter 跨域过滤器销毁
+2026-05-08 16:06:32.693 [Thread-5] INFO  o.example.week10.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 16:06:32.693 [Thread-5] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 销毁 ====
+2026-05-08 16:06:32.748 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 18332 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 16:06:32.748 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 16:06:32.749 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 16:06:32.830 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 16:06:32.831 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 16:06:32.832 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 16:06:32.842 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 91 ms
+2026-05-08 16:06:32.847 [restartedMain] INFO  o.example.week10.filter.CorsFilter - CorsFilter 跨域过滤器初始化
+2026-05-08 16:06:32.847 [restartedMain] INFO  o.example.week10.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 16:06:32.847 [restartedMain] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 初始化 ====
+2026-05-08 16:06:32.888 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 16:06:32.890 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.154 seconds (process running for 11.825)
+2026-05-08 16:06:32.890 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-05-08 16:35:47.062 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-05-08 16:35:47.063 [Thread-9] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 16:35:47.187 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 16:35:47.192 [Thread-9] INFO  o.example.week10.filter.CorsFilter - CorsFilter 跨域过滤器销毁
+2026-05-08 16:35:47.192 [Thread-9] INFO  o.example.week10.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 16:35:47.192 [Thread-9] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 销毁 ====
+2026-05-08 16:35:47.244 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 18332 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 16:35:47.244 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 16:35:47.244 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 16:35:47.312 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 16:35:47.313 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 16:35:47.313 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 16:35:47.324 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 79 ms
+2026-05-08 16:35:47.328 [restartedMain] INFO  o.example.week10.filter.CorsFilter - CorsFilter 跨域过滤器初始化
+2026-05-08 16:35:47.328 [restartedMain] INFO  o.example.week10.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 16:35:47.328 [restartedMain] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 初始化 ====
+2026-05-08 16:35:47.365 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 16:35:47.366 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.133 seconds (process running for 1766.301)
+2026-05-08 16:35:47.366 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-05-08 16:36:15.052 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-05-08 16:36:15.052 [Thread-13] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 16:36:15.184 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 16:36:15.185 [Thread-13] INFO  o.example.week10.filter.CorsFilter - CorsFilter 跨域过滤器销毁
+2026-05-08 16:36:15.185 [Thread-13] INFO  o.example.week10.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 16:36:15.185 [Thread-13] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 销毁 ====
+2026-05-08 16:36:15.230 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 18332 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 16:36:15.230 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 16:36:15.230 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 16:36:15.283 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 16:36:15.283 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 16:36:15.283 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 16:36:15.292 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 61 ms
+2026-05-08 16:36:15.295 [restartedMain] INFO  o.example.week10.filter.CorsFilter - CorsFilter 跨域过滤器初始化
+2026-05-08 16:36:15.295 [restartedMain] INFO  o.example.week10.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 16:36:15.296 [restartedMain] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 初始化 ====
+2026-05-08 16:36:15.330 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 16:36:15.331 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.111 seconds (process running for 1794.267)
+2026-05-08 16:36:15.332 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-05-08 16:36:16.747 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+2026-05-08 16:36:16.748 [Thread-17] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 16:36:16.877 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 16:36:16.878 [Thread-17] INFO  o.example.week10.filter.CorsFilter - CorsFilter 跨域过滤器销毁
+2026-05-08 16:36:16.878 [Thread-17] INFO  o.example.week10.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 16:36:16.878 [Thread-17] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 销毁 ====
+2026-05-08 16:36:16.924 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 18332 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 16:36:16.924 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 16:36:16.924 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 16:36:16.980 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 16:36:16.981 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 16:36:16.981 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 16:36:16.990 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 65 ms
+2026-05-08 16:36:16.993 [restartedMain] INFO  o.example.week10.filter.CorsFilter - CorsFilter 跨域过滤器初始化
+2026-05-08 16:36:16.993 [restartedMain] INFO  o.example.week10.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 16:36:16.993 [restartedMain] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 初始化 ====
+2026-05-08 16:36:17.016 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 16:36:17.017 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.103 seconds (process running for 1795.953)
+2026-05-08 16:36:17.017 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-05-08 16:36:35.023 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 3 class path changes (1 addition, 1 deletion, 1 modification)
+2026-05-08 16:36:35.023 [Thread-21] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 16:36:35.147 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 16:36:35.149 [Thread-21] INFO  o.example.week10.filter.CorsFilter - CorsFilter 跨域过滤器销毁
+2026-05-08 16:36:35.149 [Thread-21] INFO  o.example.week10.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 16:36:35.149 [Thread-21] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 销毁 ====
+2026-05-08 16:36:35.176 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 18332 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 16:36:35.176 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 16:36:35.176 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 16:36:35.228 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 16:36:35.228 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 16:36:35.229 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 16:36:35.236 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 59 ms
+2026-05-08 16:36:35.238 [restartedMain] INFO  o.example.week10.filter.CorsFilter - CorsFilter 跨域过滤器初始化
+2026-05-08 16:36:35.238 [restartedMain] INFO  o.example.week10.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 16:36:35.238 [restartedMain] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 初始化 ====
+2026-05-08 16:36:35.263 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 16:36:35.264 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.098 seconds (process running for 1814.2)
+2026-05-08 16:36:35.265 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-05-08 16:37:00.961 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-05-08 16:37:00.962 [Thread-25] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 16:37:01.089 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 16:37:01.089 [Thread-25] INFO  o.example.week10.filter.CorsFilter - CorsFilter 跨域过滤器销毁
+2026-05-08 16:37:01.089 [Thread-25] INFO  o.example.week10.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 16:37:01.089 [Thread-25] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 销毁 ====
+2026-05-08 16:37:01.123 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 18332 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 16:37:01.123 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 16:37:01.124 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 16:37:01.175 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 16:37:01.175 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 16:37:01.175 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 16:37:01.181 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 57 ms
+2026-05-08 16:37:01.185 [restartedMain] INFO  o.example.week10.filter.CorsFilter - CorsFilter 跨域过滤器初始化
+2026-05-08 16:37:01.185 [restartedMain] INFO  o.example.week10.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 16:37:01.185 [restartedMain] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 初始化 ====
+2026-05-08 16:37:01.211 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 16:37:01.212 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.097 seconds (process running for 1840.147)
+2026-05-08 16:37:01.213 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-05-08 16:37:02.627 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-05-08 16:37:02.628 [Thread-29] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 16:37:02.740 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 16:37:02.742 [Thread-29] INFO  o.example.week10.filter.CorsFilter - CorsFilter 跨域过滤器销毁
+2026-05-08 16:37:02.742 [Thread-29] INFO  o.example.week10.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 16:37:02.742 [Thread-29] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 销毁 ====
+2026-05-08 16:37:02.790 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 18332 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 16:37:02.791 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 16:37:02.791 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 16:37:02.847 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 16:37:02.848 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 16:37:02.848 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 16:37:02.854 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 63 ms
+2026-05-08 16:37:02.857 [restartedMain] INFO  o.example.week10.filter.CorsFilter - CorsFilter 跨域过滤器初始化
+2026-05-08 16:37:02.857 [restartedMain] INFO  o.example.week10.filter.AuthFilter - AuthFilter 初始化
+2026-05-08 16:37:02.857 [restartedMain] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 初始化 ====
+2026-05-08 16:37:02.876 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 16:37:02.877 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.096 seconds (process running for 1841.813)
+2026-05-08 16:37:02.878 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-05-08 16:40:10.466 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-05-08 16:40:10.467 [Thread-33] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 16:40:10.598 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 16:40:10.600 [Thread-33] INFO  o.example.week10.filter.CorsFilter - CorsFilter 跨域过滤器销毁
+2026-05-08 16:40:10.600 [Thread-33] INFO  o.example.week10.filter.AuthFilter - AuthFilter 销毁
+2026-05-08 16:40:10.600 [Thread-33] INFO  org.example.week10.filter.LogFilter - ==== 日志过滤器 LogFilter 销毁 ====
+2026-05-08 16:40:10.650 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 18332 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 16:40:10.650 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 16:40:10.650 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 16:40:10.697 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 16:40:10.697 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 16:40:10.697 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 16:40:10.703 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 51 ms
+2026-05-08 16:40:10.727 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 16:40:10.729 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.085 seconds (process running for 2029.664)
+2026-05-08 16:40:10.729 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-05-08 16:41:02.693 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 16:41:02.811 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-08 16:41:04.142 [restartedMain] INFO  o.example.week10.Week10Application - Starting Week10Application using Java 17.0.12 with PID 40252 (D:\tt\ttq\houduan\week10\target\classes started by 35619 in D:\tt\ttq\houduan\week10)
+2026-05-08 16:41:04.143 [restartedMain] DEBUG o.example.week10.Week10Application - Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-08 16:41:04.144 [restartedMain] INFO  o.example.week10.Week10Application - No active profile set, falling back to 1 default profile: "default"
+2026-05-08 16:41:04.167 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-08 16:41:04.168 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-08 16:41:04.567 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-08 16:41:04.577 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-08 16:41:04.577 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-08 16:41:04.597 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 429 ms
+2026-05-08 16:41:04.763 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-05-08 16:41:04.766 [restartedMain] INFO  o.example.week10.Week10Application - Started Week10Application in 0.876 seconds (process running for 1.231)
+2026-05-08 16:41:08.643 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-08 16:41:08.644 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-08 16:41:08.644 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-05-08 16:41:08.654 [http-nio-8080-exec-1] INFO  o.e.w.interceptor.LogInterceptor - [日志拦截器] 请求进入 path=/api/test, method=GET, ip=127.0.0.1, time=2026-05-08T16:41:08.654567800
+2026-05-08 16:41:08.659 [http-nio-8080-exec-1] INFO  o.e.week10.controller.TestController - 执行 Test 接口
+2026-05-08 16:41:13.675 [http-nio-8080-exec-1] INFO  o.e.w.interceptor.LogInterceptor - [日志拦截器] 响应结束 path=/api/test, status=200, 耗时=5021ms, time=2026-05-08T16:41:13.675163200, ex=null
+2026-05-08 16:46:42.500 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-08 16:46:42.627 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
