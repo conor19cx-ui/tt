@@ -1,0 +1,81 @@
+<template>
+	<view class="page">
+		<scroll-view class="tabs" scroll-x="true">
+			<view class="tab" :class="{ active: curCat === '' }" @click="changeCat('')">
+				<text class="tab-text">全部</text>
+			</view>
+			<view class="tab" :class="{ active: curCat === '教务通知' }" @click="changeCat('教务通知')">
+				<text class="tab-text">教务通知</text>
+			</view>
+			<view class="tab" :class="{ active: curCat === '活动讲座' }" @click="changeCat('活动讲座')">
+				<text class="tab-text">活动讲座</text>
+			</view>
+			<view class="tab" :class="{ active: curCat === '奖学金' }" @click="changeCat('奖学金')">
+				<text class="tab-text">奖学金</text>
+			</view>
+			<view class="tab" :class="{ active: curCat === '其他' }" @click="changeCat('其他')">
+				<text class="tab-text">其他</text>
+			</view>
+		</scroll-view>
+
+		<view class="list">
+			<view class="item" v-for="item in notices" :key="item.id" @click="goDetail(item.id)">
+				<text class="title">{{ item.title }}</text>
+				<view class="row">
+					<text class="tag">{{ item.category }}</text>
+					<text class="time">{{ formatTime(item.publishTime) }}</text>
+				</view>
+			</view>
+			<view v-if="notices.length === 0" class="empty">
+				<text class="empty-text">暂无公告</text>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script setup>
+	import { ref } from 'vue';
+	import { request } from '@/utils/api.uts';
+
+	const notices = ref([]);
+	const curCat = ref('');
+
+	const formatTime = (time) => {
+		if (!time) return '';
+		const str = String(time);
+		const match = str.match(/(\d{4})-(\d{1,2})-(\d{1,2})/);
+		if (match) {
+			return parseInt(match[2]) + '月' + parseInt(match[3]) + '日';
+		}
+		return '';
+	};
+
+	const loadData = async () => {
+		try {
+			const res = await request({ url: '/notice/list?page=1&size=20&category=' + curCat.value });
+			if (res && res.code === 200) { notices.value = res.data || []; }
+		} catch (e) {}
+	};
+
+	const changeCat = (cat) => { curCat.value = cat === '全部' ? '' : cat; loadData(); };
+	const goDetail = (id) => { uni.navigateTo({ url: '/pages/notice/detail?id=' + id }); };
+
+	loadData();
+</script>
+
+<style>
+	.page { min-height: 100vh; background-color: #f5f5f5; }
+	.tabs { background-color: #ffffff; padding-top: 20rpx; padding-bottom: 20rpx; padding-left: 30rpx; padding-right: 30rpx; white-space: nowrap; }
+	.tab { padding-top: 12rpx; padding-bottom: 12rpx; padding-left: 28rpx; padding-right: 28rpx; border-radius: 30rpx; margin-right: 20rpx; display: inline-block; }
+	.tab.active { background-color: #007AFF; }
+	.tab-text { font-size: 26rpx; color: #666666; }
+	.tab.active .tab-text { color: #ffffff; }
+	.list { padding-top: 20rpx; padding-left: 30rpx; padding-right: 30rpx; }
+	.item { background-color: #ffffff; border-radius: 16rpx; padding-top: 28rpx; padding-bottom: 28rpx; padding-left: 30rpx; padding-right: 30rpx; margin-bottom: 20rpx; }
+	.title { font-size: 30rpx; color: #333333; margin-bottom: 16rpx; }
+	.row { flex-direction: row; align-items: center; }
+	.tag { font-size: 22rpx; color: #007AFF; background-color: #e6f7ff; padding-top: 4rpx; padding-bottom: 4rpx; padding-left: 16rpx; padding-right: 16rpx; border-radius: 8rpx; margin-right: 20rpx; }
+	.time { font-size: 22rpx; color: #999999; }
+	.empty { padding-top: 200rpx; align-items: center; }
+	.empty-text { font-size: 28rpx; color: #999999; }
+</style>

@@ -1,0 +1,72 @@
+<template>
+    <view class="page">
+        <view class="field">
+            <text class="label">头像</text>
+            <image class="avatar-img" :src="form.avatar || '/static/logo.png'"></image>
+        </view>
+        <view class="field">
+            <text class="label">昵称</text>
+            <input class="input" type="text" v-model="form.nickname" placeholder="请输入昵称" />
+        </view>
+        <view class="field">
+            <text class="label">个性签名</text>
+            <textarea class="textarea" v-model="form.signature" placeholder="写一句话介绍自己" />
+        </view>
+        <view class="field">
+            <text class="label">学号</text>
+            <text class="value">{{ info && info.studentId ? info.studentId : '' }}</text>
+        </view>
+        <view class="field">
+            <text class="label">手机号</text>
+            <input class="input" type="text" v-model="form.phone" placeholder="请输入手机号" />
+        </view>
+        <view class="btn" @click="doSave"><text class="btn-text">保存修改</text></view>
+    </view>
+</template>
+
+<script setup>
+    import { ref } from 'vue';
+    import { request, getUserInfo } from '@/utils/api.uts';
+
+    const info = ref(null);
+    const form = ref({ nickname: '', signature: '', phone: '', avatar: '' });
+
+    onShow(() => {
+        const u = getUserInfo();
+        if (u) {
+            info.value = u;
+            form.value.nickname = u.nickname || '';
+            form.value.signature = u.signature || '';
+            form.value.phone = u.phone || '';
+            form.value.avatar = u.avatar || '';
+        }
+    });
+
+    const doSave = async () => {
+        if (!form.value.nickname) { uni.showToast({ title: '请输入昵称', icon: 'none' }); return; }
+        try {
+            const res = await request({
+                url: '/user/update', method: 'POST',
+                data: { id: info.value.id, nickname: form.value.nickname, signature: form.value.signature, phone: form.value.phone, avatar: form.value.avatar }
+            });
+            if (res && res.code === 200) {
+                const newInfo = { ...info.value, ...form.value };
+                uni.setStorageSync('userInfo', JSON.stringify(newInfo));
+                uni.showToast({ title: '保存成功', icon: 'success' });
+                setTimeout(() => { uni.navigateBack(); }, 800);
+            }
+        } catch (e) {}
+    };
+</script>
+
+<style>
+    .page { min-height: 100vh; background-color: #f5f5f5; padding: 30rpx; }
+    .field { margin-bottom: 36rpx; }
+    .label { font-size: 28rpx; color: #333333; margin-bottom: 16rpx; }
+    .avatar-img { width: 120rpx; height: 120rpx; border-radius: 60rpx; }
+    .input { height: 88rpx; border-width: 1px; border-color: #dddddd; border-radius: 16rpx; padding-left: 30rpx; padding-right: 30rpx; font-size: 30rpx; background-color: #ffffff; }
+    .textarea { height: 160rpx; border-width: 1px; border-color: #dddddd; border-radius: 16rpx; padding: 20rpx 30rpx; font-size: 30rpx; background-color: #ffffff; width: 100%; }
+    .value { font-size: 30rpx; color: #999999; padding-top: 20rpx; padding-bottom: 20rpx; }
+    .btn { height: 96rpx; background-color: #007AFF; border-radius: 48rpx; align-items: center; justify-content: center; margin-top: 60rpx; }
+    .btn-text { font-size: 32rpx; color: #ffffff; }
+</style>

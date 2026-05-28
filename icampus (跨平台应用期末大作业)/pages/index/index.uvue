@@ -1,0 +1,296 @@
+<template>
+	<view class="page">
+		<view class="welcome-box">
+			<view class="welcome-left">
+				<text class="greeting-text">{{ greeting }}{{ nickname ? nickname : '' }}</text>
+				<text class="sub-text">加油学习哦</text>
+			</view>
+			<image class="head-img" src="/static/logo.png" @click="goMy"></image>
+		</view>
+
+		<view class="card">
+			<text class="card-title">常用功能</text>
+			<view class="icon-row">
+				<view class="icon-item" @click="goNotice">
+					<image class="icon-img" src="/static/公告中心.png" mode="aspectFit"></image>
+					<text class="icon-label">公告中心</text>
+				</view>
+				<view class="icon-item" @click="goProduct">
+					<image class="icon-img" src="/static/二手市场.png" mode="aspectFit"></image>
+					<text class="icon-label">二手市场</text>
+				</view>
+				<view class="icon-item" @click="goService">
+					<image class="icon-img" src="/static/校园服务.png" mode="aspectFit"></image>
+					<text class="icon-label">校园服务</text>
+				</view>
+				<view class="icon-item" @click="goMessage">
+					<image class="icon-img" src="/static/消息中心.png" mode="aspectFit"></image>
+					<text class="icon-label">消息中心</text>
+				</view>
+			</view>
+		</view>
+
+		<view class="card">
+			<view class="card-header">
+				<text class="card-title">最新公告</text>
+				<text class="more-link" @click="goNotice">全部</text>
+			</view>
+			<view v-if="notices.length > 0">
+				<view class="list-item" v-for="item in notices" :key="item.id" @click="goNoticeDetail(item.id)">
+					<text class="item-title">{{ item.title }}</text>
+					<view class="item-row">
+						<text class="item-tag">{{ item.category }}</text>
+						<text class="item-time">{{ formatTime(item.publishTime) }}</text>
+					</view>
+				</view>
+			</view>
+			<view v-if="notices.length === 0" class="empty-box">
+				<text class="empty-text">暂无公告</text>
+			</view>
+		</view>
+
+		<view class="card">
+			<view class="card-header">
+				<text class="card-title">最近消息</text>
+				<text class="more-link" @click="goMessage">全部</text>
+			</view>
+			<view v-if="messages.length > 0">
+				<view class="list-item" v-for="item in messages" :key="item.id" @click="readMsg(item)">
+					<view class="item-row">
+						<view v-if="item.isRead === 0" class="red-dot"></view>
+						<text class="item-title">{{ item.title }}</text>
+						<text class="item-time">{{ formatTime(item.createTime) }}</text>
+					</view>
+				</view>
+			</view>
+			<view v-if="messages.length === 0" class="empty-box">
+				<text class="empty-text">暂无消息</text>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script setup>
+	import { ref, computed } from 'vue';
+	import { request, getUserInfo } from '@/utils/api.uts';
+
+	const userInfo = ref(null);
+	const notices = ref([]);
+	const messages = ref([]);
+
+	const nickname = computed(() => {
+		const info = userInfo.value;
+		if (!info) return '同学';
+		return info.nickname ? info.nickname : '同学';
+	});
+
+	const greeting = computed(() => {
+		const hour = new Date().getHours();
+		if (hour < 6) return '夜深了 ';
+		if (hour < 12) return '早上好 ';
+		if (hour < 14) return '中午好 ';
+		if (hour < 18) return '下午好 ';
+		return '晚上好 ';
+	});
+
+	const formatTime = (time) => {
+		if (!time) return '';
+		const str = String(time);
+		const match = str.match(/(\d{4})-(\d{1,2})-(\d{1,2})/);
+		if (match) {
+			return parseInt(match[2]) + '月' + parseInt(match[3]) + '日';
+		}
+		return '';
+	};
+
+	const loadUserInfo = () => {
+		const info = getUserInfo();
+		if (info) {
+			userInfo.value = info;
+		} else {
+			uni.navigateTo({ url: '/pages/login/login' });
+		}
+	};
+
+	const loadData = async () => {
+		try {
+			const res = await request({ url: '/notice/list?page=1&size=3' });
+			if (res && res.code === 200) {
+				notices.value = res.data || [];
+			}
+		} catch (e) {}
+
+		if (userInfo.value && userInfo.value.id) {
+			try {
+				const res = await request({ url: '/message/list?page=1&size=3&userId=' + userInfo.value.id });
+				if (res && res.code === 200) {
+					messages.value = res.data || [];
+				}
+			} catch (e) {}
+		}
+	};
+
+	const goNotice = () => { uni.navigateTo({ url: '/pages/notice/list' }); };
+	const goNoticeDetail = (id) => { uni.navigateTo({ url: '/pages/notice/detail?id=' + id }); };
+	const goProduct = () => { uni.switchTab({ url: '/pages/product/list' }); };
+	const goService = () => { uni.switchTab({ url: '/pages/service/list' }); };
+	const goMessage = () => { uni.navigateTo({ url: '/pages/message/list' }); };
+	const goMy = () => { uni.switchTab({ url: '/pages/my/profile' }); };
+
+	const readMsg = async (item) => {
+		if (item.isRead === 0) {
+			try {
+				await request({ url: '/message/markRead', method: 'POST', data: { id: item.id } });
+				item.isRead = 1;
+			} catch (e) {}
+		}
+	};
+
+	onShow(() => {
+		loadUserInfo();
+		loadData();
+	});
+</script>
+
+<style>
+	.page {
+		background-color: #f5f5f5;
+		min-height: 100vh;
+	}
+
+	.welcome-box {
+		background-color: #ffffff;
+		padding-top: 60rpx;
+		padding-bottom: 40rpx;
+		padding-left: 40rpx;
+		padding-right: 40rpx;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.welcome-left {
+		flex-direction: column;
+	}
+
+	.greeting-text {
+		font-size: 40rpx;
+		font-weight: bold;
+		color: #333333;
+	}
+
+	.sub-text {
+		font-size: 28rpx;
+		color: #999999;
+		margin-top: 10rpx;
+	}
+
+	.head-img {
+		width: 100rpx;
+		height: 100rpx;
+		border-radius: 50rpx;
+	}
+
+	.card {
+		background-color: #ffffff;
+		margin-top: 20rpx;
+		padding-top: 30rpx;
+		padding-bottom: 30rpx;
+		padding-left: 40rpx;
+		padding-right: 40rpx;
+	}
+
+	.card-header {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20rpx;
+	}
+
+	.card-title {
+		font-size: 32rpx;
+		font-weight: bold;
+		color: #333333;
+	}
+
+	.more-link {
+		font-size: 26rpx;
+		color: #999999;
+	}
+
+	.icon-row {
+		flex-direction: row;
+		justify-content: space-around;
+		margin-top: 30rpx;
+	}
+
+	.icon-item {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.icon-img {
+		width: 100rpx;
+		height: 100rpx;
+	}
+
+	.icon-label {
+		font-size: 24rpx;
+		color: #666666;
+		margin-top: 16rpx;
+	}
+
+	.list-item {
+		padding-top: 24rpx;
+		padding-bottom: 24rpx;
+		border-bottom-width: 1px;
+		border-bottom-color: #f0f0f0;
+	}
+
+	.item-row {
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.item-title {
+		font-size: 28rpx;
+		color: #333333;
+		flex: 1;
+	}
+
+	.item-tag {
+		font-size: 22rpx;
+		color: #007AFF;
+		background-color: #e6f7ff;
+		padding-top: 4rpx;
+		padding-bottom: 4rpx;
+		padding-left: 16rpx;
+		padding-right: 16rpx;
+		border-radius: 8rpx;
+		margin-right: 20rpx;
+	}
+
+	.item-time {
+		font-size: 22rpx;
+		color: #999999;
+	}
+
+	.red-dot {
+		width: 16rpx;
+		height: 16rpx;
+		border-radius: 8rpx;
+		background-color: #ff4d4f;
+		margin-right: 20rpx;
+	}
+
+	.empty-box {
+		padding-top: 60rpx;
+		padding-bottom: 60rpx;
+		align-items: center;
+	}
+
+	.empty-text {
+		font-size: 28rpx;
+		color: #999999;
+	}
+</style>

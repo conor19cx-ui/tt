@@ -1,0 +1,182 @@
+<template>
+	<view class="page">
+		<view class="field">
+			<text class="label">商品名称</text>
+			<input class="input" type="text" v-model="form.title" placeholder="例如: 高数教材" />
+		</view>
+		<view class="field">
+			<text class="label">商品图片</text>
+			<view class="img-list">
+				<view class="img-item" v-for="(img, idx) in images" :key="idx">
+					<image class="img" :src="img" mode="aspectFill"></image>
+					<view class="del-btn" @click="removeImage(idx)"><text class="del-text">X</text></view>
+				</view>
+				<view class="add-btn" @click="chooseImage" v-if="images.length < 9">
+					<text class="add-text">+</text>
+				</view>
+			</view>
+		</view>
+		<view class="field">
+			<text class="label">分类</text>
+			<view class="picker" @click="showCat = true"><text>{{ form.category || '请选择分类' }}</text></view>
+		</view>
+		<view class="field">
+			<text class="label">价格 (元)</text>
+			<input class="input" type="digit" v-model="form.price" placeholder="例如: 25" />
+		</view>
+		<view class="field">
+			<text class="label">成色</text>
+			<view class="picker" @click="showCond = true"><text>{{ form.condition || '请选择成色' }}</text></view>
+		</view>
+		<view class="field">
+			<text class="label">详细描述</text>
+			<textarea class="textarea" v-model="form.description" placeholder="请描述商品情况" />
+		</view>
+		<view class="field">
+			<text class="label">联系方式</text>
+			<input class="input" type="text" v-model="form.contact" placeholder="请输入手机号或微信号" />
+		</view>
+		<view class="btn" @click="doSubmit"><text class="btn-text">{{ uploading ? '上传中...' : '发布' }}</text></view>
+
+		<view v-if="showCat" class="modal">
+			<view class="mask" @click="showCat = false"></view>
+			<view class="panel">
+				<view class="panel-head">
+					<text class="cancel" @click="showCat = false">取消</text>
+					<text class="confirm" @click="showCat = false">确定</text>
+				</view>
+				<view class="option" v-for="c in cats" :key="c" @click="form.category = c"><text>{{ c }}</text></view>
+			</view>
+		</view>
+
+		<view v-if="showCond" class="modal">
+			<view class="mask" @click="showCond = false"></view>
+			<view class="panel">
+				<view class="panel-head">
+					<text class="cancel" @click="showCond = false">取消</text>
+					<text class="confirm" @click="showCond = false">确定</text>
+				</view>
+				<view class="option" v-for="c in conds" :key="c" @click="form.condition = c"><text>{{ c }}</text></view>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script setup>
+	import { ref } from 'vue';
+	import { request, getUserInfo } from '@/utils/api.uts';
+
+	const BASE_URL = 'http://localhost:8080';
+
+	const form = ref({ title: '', category: '', price: '', condition: '', description: '', contact: '' });
+	const images = ref([]);
+	const uploadedUrls = ref([]);
+	const uploading = ref(false);
+	const showCat = ref(false);
+	const showCond = ref(false);
+	const cats = ['书籍教材', '电子产品', '生活用品', '运动器材', '其他'];
+	const conds = ['全新', '九成新', '八成新', '七成新', '其他'];
+
+	const chooseImage = () => {
+		uni.chooseImage({
+			count: 9 - images.value.length,
+			sizeType: ['compressed'],
+			sourceType: ['album', 'camera'],
+			success: (res) => {
+				images.value = images.value.concat(res.tempFilePaths);
+			}
+		});
+	};
+
+	const removeImage = (idx) => {
+		images.value.splice(idx, 1);
+	};
+
+	const uploadImages = async (productId, userId) => {
+		for (let i = 0; i < images.value.length; i++) {
+			try {
+				await new Promise((resolve, reject) => {
+					uni.uploadFile({
+						url: BASE_URL + '/api/image/upload',
+						filePath: images.value[i],
+						name: 'file',
+						formData: {
+							type: 'product',
+							relatedId: productId,
+							userId: userId
+						},
+						success: (res) => {
+							const data = JSON.parse(res.data);
+							if (data.code === 200) {
+								resolve();
+							} else {
+								reject();
+							}
+						},
+						fail: () => {
+							reject();
+						}
+					});
+				});
+			} catch (e) {
+				console.log('图片上传失败:', e);
+			}
+		}
+	};
+
+	const doSubmit = async () => {
+		if (!form.value.title) { uni.showToast({ title: '请输入商品名称', icon: 'none' }); return; }
+		if (!form.value.category) { uni.showToast({ title: '请选择分类', icon: 'none' }); return; }
+		if (!form.value.price) { uni.showToast({ title: '请输入价格', icon: 'none' }); return; }
+		if (!form.value.condition) { uni.showToast({ title: '请选择成色', icon: 'none' }); return; }
+		if (!form.value.description || form.value.description.length < 10) { uni.showToast({ title: '描述不少于10个字', icon: 'none' }); return; }
+		if (!form.value.contact) { uni.showToast({ title: '请输入联系方式', icon: 'none' }); return; }
+
+		const info = getUserInfo();
+		if (!info) { uni.navigateTo({ url: '/pages/login/login' }); return; }
+
+		try {
+			const res = await request({
+				url: '/product/publish', method: 'POST',
+				data: { title: form.value.title, category: form.value.category, price: parseFloat(form.value.price), goodsCondition: form.value.condition, description: form.value.description, contact: form.value.contact, userId: info.id }
+			});
+			if (res && res.code === 200) {
+				// 上传图片
+				if (images.value.length > 0) {
+					uploading.value = true;
+					await uploadImages(res.data, info.id);
+					uploading.value = false;
+				}
+				uni.showToast({ title: '发布成功', icon: 'success' });
+				setTimeout(() => { uni.navigateBack(); }, 800);
+			}
+		} catch (e) {
+			uploading.value = false;
+		}
+	};
+</script>
+
+<style>
+	.page { min-height: 100vh; background-color: #f5f5f5; padding: 30rpx; }
+	.field { margin-bottom: 36rpx; }
+	.label { font-size: 28rpx; color: #333333; margin-bottom: 16rpx; }
+	.input { height: 88rpx; border-width: 1px; border-color: #dddddd; border-radius: 16rpx; padding-left: 30rpx; padding-right: 30rpx; font-size: 30rpx; background-color: #ffffff; }
+	.picker { height: 88rpx; border-width: 1px; border-color: #dddddd; border-radius: 16rpx; padding-left: 30rpx; padding-right: 30rpx; justify-content: center; font-size: 30rpx; color: #333333; background-color: #ffffff; }
+	.textarea { height: 200rpx; border-width: 1px; border-color: #dddddd; border-radius: 16rpx; padding: 20rpx 30rpx; font-size: 30rpx; background-color: #ffffff; width: 100%; }
+	.btn { height: 96rpx; background-color: #007AFF; border-radius: 48rpx; align-items: center; justify-content: center; margin-top: 60rpx; }
+	.btn-text { font-size: 32rpx; color: #ffffff; }
+	.modal { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 100; }
+	.mask { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.5); }
+	.panel { position: absolute; bottom: 0; left: 0; right: 0; background-color: #ffffff; max-height: 70vh; }
+	.panel-head { flex-direction: row; justify-content: space-between; padding: 30rpx; border-bottom-width: 1px; border-bottom-color: #f0f0f0; }
+	.cancel { font-size: 30rpx; color: #999999; }
+	.confirm { font-size: 30rpx; color: #007AFF; }
+	.option { padding: 30rpx; align-items: center; border-bottom-width: 1px; border-bottom-color: #f0f0f0; }
+	.img-list { flex-direction: row; flex-wrap: wrap; }
+	.img-item { width: 200rpx; height: 200rpx; margin-right: 20rpx; margin-bottom: 20rpx; position: relative; }
+	.img { width: 200rpx; height: 200rpx; border-radius: 16rpx; }
+	.del-btn { position: absolute; top: -10rpx; right: -10rpx; width: 40rpx; height: 40rpx; border-radius: 20rpx; background-color: #ff4d4f; align-items: center; justify-content: center; }
+	.del-text { font-size: 24rpx; color: #ffffff; }
+	.add-btn { width: 200rpx; height: 200rpx; border-width: 2rpx; border-color: #dddddd; border-radius: 16rpx; border-style: dashed; align-items: center; justify-content: center; }
+	.add-text { font-size: 60rpx; color: #999999; }
+</style>

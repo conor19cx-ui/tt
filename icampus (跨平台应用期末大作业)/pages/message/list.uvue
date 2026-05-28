@@ -1,0 +1,78 @@
+<template>
+	<view class="page">
+		<view class="tabs">
+			<view class="tab" :class="{ active: cur === '' }" @click="change('')"><text class="tab-text">全部</text></view>
+			<view class="tab" :class="{ active: cur === '系统通知' }" @click="change('系统通知')"><text class="tab-text">系统通知</text></view>
+			<view class="tab" :class="{ active: cur === '预约通知' }" @click="change('预约通知')"><text class="tab-text">预约通知</text></view>
+			<view class="tab" :class="{ active: cur === '二手交易' }" @click="change('二手交易')"><text class="tab-text">二手交易</text></view>
+		</view>
+		<view class="list">
+			<view class="item" v-for="item in list" :key="item.id" @click="read(item)">
+				<view v-if="item.isRead === 0" class="dot"></view>
+				<view class="content">
+					<view class="head">
+						<text class="title">{{ item.title }}</text>
+						<text class="time">{{ formatTime(item.createTime) }}</text>
+					</view>
+					<text class="desc">{{ item.content }}</text>
+				</view>
+			</view>
+			<view v-if="list.length === 0" class="empty"><text class="empty-text">暂无消息</text></view>
+		</view>
+	</view>
+</template>
+
+<script setup>
+	import { ref } from 'vue';
+	import { request, getUserInfo } from '@/utils/api.uts';
+
+	const list = ref([]);
+	const cur = ref('');
+
+	const formatTime = (time) => {
+		if (!time) return '';
+		const str = String(time);
+		const match = str.match(/(\d{4})-(\d{1,2})-(\d{1,2})/);
+		if (match) {
+			return parseInt(match[2]) + '月' + parseInt(match[3]) + '日';
+		}
+		return '';
+	};
+
+	const loadData = () => {
+		const info = getUserInfo();
+		if (!info) return;
+		request({ url: '/message/list?page=1&size=20&userId=' + info.id + '&type=' + cur.value }).then((res) => {
+			if (res && res.code === 200) { list.value = res.data || []; }
+		});
+	};
+
+	const change = (t) => { cur.value = t === '全部' ? '' : t; loadData(); };
+
+	const read = (item) => {
+		if (item.isRead === 0) {
+			request({ url: '/message/markRead', method: 'POST', data: { id: item.id } }).then(() => { item.isRead = 1; });
+		}
+	};
+
+	loadData();
+</script>
+
+<style>
+	.page { min-height: 100vh; background-color: #f5f5f5; }
+	.tabs { background-color: #ffffff; flex-direction: row; padding: 20rpx 30rpx; }
+	.tab { padding: 10rpx 24rpx; border-radius: 30rpx; margin-right: 15rpx; }
+	.tab.active { background-color: #007AFF; }
+	.tab-text { font-size: 24rpx; color: #666666; }
+	.tab.active .tab-text { color: #ffffff; }
+	.list { padding: 20rpx; }
+	.item { background-color: #ffffff; border-radius: 16rpx; padding: 24rpx; margin-bottom: 16rpx; flex-direction: row; }
+	.dot { width: 16rpx; height: 16rpx; border-radius: 8rpx; background-color: #ff4d4f; margin-right: 16rpx; margin-top: 8rpx; }
+	.content { flex: 1; }
+	.head { flex-direction: row; justify-content: space-between; margin-bottom: 12rpx; }
+	.title { font-size: 30rpx; font-weight: bold; color: #333333; }
+	.time { font-size: 24rpx; color: #999999; }
+	.desc { font-size: 26rpx; color: #666666; }
+	.empty { padding-top: 200rpx; align-items: center; }
+	.empty-text { font-size: 28rpx; color: #999999; }
+</style>

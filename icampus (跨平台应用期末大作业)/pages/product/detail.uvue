@@ -1,0 +1,87 @@
+<template>
+	<view class="page" v-if="product">
+		<view class="img-area">
+			<swiper v-if="images.length > 0" class="swiper" indicator-dots autoplay circular>
+				<swiper-item v-for="(img, idx) in images" :key="idx">
+					<image class="img" :src="img.url" mode="aspectFill"></image>
+				</swiper-item>
+			</swiper>
+			<image v-else class="img" src="/static/logo.png" mode="aspectFill"></image>
+		</view>
+		<view class="section">
+			<text class="price">¥{{ product.price }}</text>
+			<text class="title">{{ product.title }}</text>
+			<view class="row">
+				<text class="tag">{{ product.category }}</text>
+				<text class="tag">{{ product.goodsCondition }}</text>
+			</view>
+			<text class="time">发布时间: {{ product.createTime }}</text>
+		</view>
+		<view class="section">
+			<text class="section-title">商品详情</text>
+			<text class="desc">{{ product.description }}</text>
+		</view>
+		<view class="section">
+			<text class="section-title">联系方式</text>
+			<text class="contact">{{ product.contact }}</text>
+		</view>
+		<view class="bottom-bar">
+			<view class="btn" @click="copyContact">
+				<text class="btn-text">复制联系方式</text>
+			</view>
+		</view>
+	</view>
+	<view v-else class="page">
+		<view class="empty"><text class="empty-text">加载中...</text></view>
+	</view>
+</template>
+
+<script setup>
+	import { ref } from 'vue';
+	import { request } from '@/utils/api.uts';
+
+	const product = ref(null);
+	const images = ref([]);
+
+	onLoad((options) => {
+		if (options && options.id) {
+			const productId = options.id;
+			request({ url: '/product/detail?id=' + productId }).then((res) => {
+				if (res && res.code === 200) { product.value = res.data; }
+			});
+			request({ url: '/image/list?type=product&relatedId=' + productId }).then((res) => {
+				if (res && res.code === 200 && res.data) {
+					images.value = res.data.map((item) => ({ url: item.url }));
+				}
+			});
+		}
+	});
+
+	const copyContact = () => {
+		if (product.value && product.value.contact) {
+			uni.setClipboardData({ data: product.value.contact });
+			uni.showToast({ title: '已复制联系方式', icon: 'success' });
+		}
+	};
+</script>
+
+<style>
+	.page { min-height: 100vh; background-color: #f5f5f5; padding-bottom: 120rpx; }
+	.img-area { background-color: #ffffff; }
+	.swiper { width: 750rpx; height: 750rpx; }
+	.img { width: 750rpx; height: 750rpx; background-color: #f0f0f0; }
+	.section { background-color: #ffffff; padding: 30rpx; margin-bottom: 20rpx; }
+	.price { font-size: 48rpx; font-weight: bold; color: #ff4d4f; margin-bottom: 20rpx; }
+	.title { font-size: 32rpx; color: #333333; margin-bottom: 20rpx; }
+	.row { flex-direction: row; margin-bottom: 16rpx; }
+	.tag { font-size: 24rpx; color: #007AFF; background-color: #e6f7ff; padding-top: 4rpx; padding-bottom: 4rpx; padding-left: 16rpx; padding-right: 16rpx; border-radius: 8rpx; margin-right: 20rpx; }
+	.time { font-size: 24rpx; color: #999999; }
+	.section-title { font-size: 30rpx; font-weight: bold; color: #333333; margin-bottom: 20rpx; }
+	.desc { font-size: 28rpx; color: #666666; line-height: 1.8; }
+	.contact { font-size: 28rpx; color: #333333; }
+	.bottom-bar { position: fixed; bottom: 0; left: 0; right: 0; background-color: #ffffff; padding: 20rpx 30rpx; border-top-width: 1px; border-top-color: #f0f0f0; }
+	.btn { background-color: #007AFF; height: 88rpx; border-radius: 44rpx; align-items: center; justify-content: center; }
+	.btn-text { font-size: 32rpx; color: #ffffff; }
+	.empty { padding-top: 300rpx; align-items: center; }
+	.empty-text { font-size: 28rpx; color: #999999; }
+</style>

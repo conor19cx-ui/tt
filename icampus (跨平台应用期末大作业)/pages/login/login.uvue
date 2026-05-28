@@ -1,0 +1,173 @@
+<template>
+	<view class="page">
+		<view class="logo-area">
+			<text class="logo-text">iCampus</text>
+			<text class="logo-sub">智慧校园生活</text>
+		</view>
+
+		<view class="form-card">
+			<text class="form-title">欢迎登录</text>
+
+			<view class="field">
+				<text class="field-label">学号 / 手机号</text>
+				<input class="field-input" type="text" v-model="username" placeholder="请输入学号或手机号" @input="clearErr" />
+				<text v-if="errUser" class="err-msg">{{ errUser }}</text>
+			</view>
+
+			<view class="field">
+				<text class="field-label">密码</text>
+				<input class="field-input" type="password" v-model="password" placeholder="请输入密码" @input="clearErr" />
+				<text v-if="errPwd" class="err-msg">{{ errPwd }}</text>
+			</view>
+
+			<view class="login-btn" @click="doLogin">
+				<text class="login-btn-text">{{ loading ? '登录中...' : '登录' }}</text>
+			</view>
+
+			<view class="tip-area">
+				<text class="tip-text">本系统仅限本校学生使用</text>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script setup>
+	import { ref } from 'vue';
+	import { request, setUserInfo } from '@/utils/api.uts';
+
+	const username = ref('');
+	const password = ref('');
+	const loading = ref(false);
+	const errUser = ref('');
+	const errPwd = ref('');
+
+	const clearErr = () => {
+		errUser.value = '';
+		errPwd.value = '';
+	};
+
+	const validate = () => {
+	    let ok = true;
+	    // 用 === '' 明确判断是否为空字符串，返回布尔值
+	    if (username.value === '') { 
+	        errUser.value = '账号不能为空'; 
+	        ok = false; 
+	    }
+	    if (password.value === '') { 
+	        errPwd.value = '密码不能为空'; 
+	        ok = false; 
+	    } else if (password.value.length < 6) { 
+	        errPwd.value = '密码长度至少为6位'; 
+	        ok = false; 
+	    }
+	    return ok;
+	}
+
+	const doLogin = async () => {
+		if (!validate()) return;
+		if (loading.value) return;
+		loading.value = true;
+		try {
+			const res = await request({
+				url: '/user/login',
+				method: 'POST',
+				data: { username: username.value, password: password.value }
+			});
+			if (res && res.code === 200) {
+				setUserInfo(JSON.stringify(res.data));
+				uni.showToast({ title: '登录成功', icon: 'success' });
+				setTimeout(() => { uni.switchTab({ url: '/pages/index/index' }); }, 800);
+			} else {
+				const msg = (res && res.message) ? res.message : '登录失败';
+				uni.showToast({ title: msg, icon: 'none' });
+			}
+		} catch (e) {
+			uni.showToast({ title: '网络请求失败', icon: 'none' });
+		}
+		loading.value = false;
+	};
+</script>
+
+<style>
+	.page {
+		min-height: 100vh;
+		background-color: #ffffff;
+		padding-top: 120rpx;
+		padding-left: 60rpx;
+		padding-right: 60rpx;
+	}
+
+	.logo-area {
+		align-items: center;
+		margin-bottom: 80rpx;
+	}
+
+	.logo-text {
+		font-size: 72rpx;
+		font-weight: bold;
+		color: #007AFF;
+	}
+
+	.logo-sub {
+		font-size: 28rpx;
+		color: #999999;
+		margin-top: 10rpx;
+	}
+
+	.form-title {
+		font-size: 48rpx;
+		font-weight: bold;
+		color: #333333;
+		margin-bottom: 60rpx;
+	}
+
+	.field {
+		margin-bottom: 36rpx;
+	}
+
+	.field-label {
+		font-size: 28rpx;
+		color: #333333;
+		margin-bottom: 16rpx;
+	}
+
+	.field-input {
+		height: 96rpx;
+		border-width: 1px;
+		border-color: #dddddd;
+		border-radius: 16rpx;
+		padding-left: 30rpx;
+		padding-right: 30rpx;
+		font-size: 32rpx;
+	}
+
+	.err-msg {
+		font-size: 24rpx;
+		color: #ff4d4f;
+		margin-top: 10rpx;
+	}
+
+	.login-btn {
+		height: 96rpx;
+		background-color: #007AFF;
+		border-radius: 16rpx;
+		align-items: center;
+		justify-content: center;
+		margin-top: 60rpx;
+	}
+
+	.login-btn-text {
+		font-size: 32rpx;
+		color: #ffffff;
+	}
+
+	.tip-area {
+		align-items: center;
+		margin-top: 80rpx;
+	}
+
+	.tip-text {
+		font-size: 24rpx;
+		color: #999999;
+	}
+</style>

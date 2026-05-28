@@ -1,0 +1,105 @@
+<template>
+	<view class="page">
+		<view class="tabs">
+			<view class="tab" :class="{ active: cur === '' }" @click="change('')"><text class="tab-text">全部</text></view>
+			<view class="tab" :class="{ active: cur === '在售' }" @click="change('在售')"><text class="tab-text">在售</text></view>
+			<view class="tab" :class="{ active: cur === '已下架' }" @click="change('已下架')"><text class="tab-text">已下架</text></view>
+		</view>
+		<view class="list">
+			<view class="item" v-for="item in list" :key="item.id" @click="goDetail(item.id)">
+				<image class="item-img" :src="itemImage(item.id)" mode="aspectFill"></image>
+				<view class="item-info">
+					<text class="item-title">{{ item.title }}</text>
+					<text class="item-price">¥{{ item.price }}</text>
+					<view class="item-row">
+						<text class="item-time">{{ formatTime(item.createTime) }}</text>
+						<text class="item-status" :class="item.status === '在售' ? 'on-sale' : 'off-shelf'">{{ item.status }}</text>
+					</view>
+				</view>
+				<view v-if="item.status === '在售'" class="off-btn" @click.stop="offShelf(item.id)"><text class="off-text">下架</text></view>
+			</view>
+			<view v-if="list.length === 0" class="empty"><text class="empty-text">你还没有发布任何二手商品</text></view>
+		</view>
+	</view>
+</template>
+
+<script setup>
+	import { ref } from 'vue';
+	import { request, getUserInfo } from '@/utils/api.uts';
+
+	const list = ref([]);
+	const imageMap = ref({});
+	const cur = ref('');
+
+	const formatTime = (time) => {
+		if (!time) return '';
+		const str = String(time);
+		const match = str.match(/(\d{4})-(\d{1,2})-(\d{1,2})/);
+		if (match) {
+			return parseInt(match[2]) + '月' + parseInt(match[3]) + '日';
+		}
+		return '';
+	};
+
+	const itemImage = (id) => {
+		return imageMap.value[id] || '/static/logo.png';
+	};
+
+	const loadData = () => {
+		const info = getUserInfo();
+		if (!info) return;
+		request({ url: '/product/my?page=1&size=20&userId=' + info.id + '&status=' + cur.value }).then((res) => {
+			if (res && res.code === 200) {
+				const data = res.data || [];
+				list.value = data;
+				if (data.length > 0) {
+					const ids = data.map((item) => item.id).join(',');
+					request({ url: '/image/firstByProducts?ids=' + ids }).then((imgRes) => {
+						if (imgRes && imgRes.code === 200 && imgRes.data) {
+							imageMap.value = imgRes.data;
+						}
+					});
+				}
+			}
+		});
+	};
+
+	const change = (s) => { cur.value = s === '全部' ? '' : s; loadData(); };
+	const goDetail = (id) => { uni.navigateTo({ url: '/pages/product/detail?id=' + id }); };
+
+	const offShelf = (id) => {
+		uni.showModal({ title: '提示', content: '确定要下架该商品吗？', success: (res) => {
+			if (res.confirm) {
+				request({ url: '/product/updateStatus', method: 'POST', data: { id: id, status: '已下架' } }).then((res2) => {
+					if (res2 && res2.code === 200) { uni.showToast({ title: '下架成功', icon: 'success' }); loadData(); }
+				});
+			}
+		}});
+	};
+
+	loadData();
+</script>
+
+<style>
+	.page { min-height: 100vh; background-color: #f5f5f5; }
+	.tabs { background-color: #ffffff; flex-direction: row; padding: 20rpx 30rpx; }
+	.tab { padding: 12rpx 28rpx; border-radius: 30rpx; margin-right: 20rpx; }
+	.tab.active { background-color: #007AFF; }
+	.tab-text { font-size: 26rpx; color: #666666; }
+	.tab.active .tab-text { color: #ffffff; }
+	.list { padding: 20rpx; }
+	.item { background-color: #ffffff; border-radius: 16rpx; padding: 20rpx; flex-direction: row; margin-bottom: 20rpx; }
+	.item-img { width: 160rpx; height: 160rpx; border-radius: 16rpx; background-color: #f0f0f0; }
+	.item-info { flex: 1; margin-left: 20rpx; }
+	.item-title { font-size: 30rpx; color: #333333; }
+	.item-price { font-size: 32rpx; color: #ff4d4f; font-weight: bold; margin-top: 10rpx; }
+	.item-row { flex-direction: row; justify-content: space-between; align-items: center; margin-top: 10rpx; }
+	.item-time { font-size: 24rpx; color: #999999; }
+	.item-status { font-size: 22rpx; padding: 4rpx 12rpx; border-radius: 8rpx; }
+	.item-status.on-sale { background-color: #f6ffed; color: #52c41a; }
+	.item-status.off-shelf { background-color: #f5f5f5; color: #999999; }
+	.off-btn { padding: 12rpx 24rpx; background-color: #fff1f0; border-radius: 8rpx; }
+	.off-text { font-size: 24rpx; color: #ff4d4f; }
+	.empty { padding-top: 200rpx; align-items: center; }
+	.empty-text { font-size: 28rpx; color: #999999; }
+</style>

@@ -1,0 +1,230 @@
+<template>
+	<view class="page">
+		<view class="top-bar">
+			<view class="search-box">
+				<input class="search-input" type="text" v-model="keyword" placeholder="搜索商品关键字" @confirm="loadData" />
+			</view>
+			<view class="pub-btn" @click="goPublish">
+				<text class="pub-btn-text">发布</text>
+			</view>
+		</view>
+
+		<scroll-view class="tabs" scroll-x="true">
+			<view class="tab" :class="{ active: curCat === '' }" @click="changeCat('')">
+				<text class="tab-text">全部</text>
+			</view>
+			<view class="tab" :class="{ active: curCat === '书籍教材' }" @click="changeCat('书籍教材')">
+				<text class="tab-text">书籍教材</text>
+			</view>
+			<view class="tab" :class="{ active: curCat === '电子产品' }" @click="changeCat('电子产品')">
+				<text class="tab-text">电子产品</text>
+			</view>
+			<view class="tab" :class="{ active: curCat === '生活用品' }" @click="changeCat('生活用品')">
+				<text class="tab-text">生活用品</text>
+			</view>
+			<view class="tab" :class="{ active: curCat === '运动器材' }" @click="changeCat('运动器材')">
+				<text class="tab-text">运动器材</text>
+			</view>
+		</scroll-view>
+
+		<view class="grid">
+			<view class="grid-item" v-for="item in products" :key="item.id" @click="goDetail(item.id)">
+				<image class="item-img" :src="itemImage(item.id)" mode="aspectFill"></image>
+				<text class="item-title">{{ item.title }}</text>
+				<view class="item-bottom">
+					<text class="item-price">¥{{ item.price }}</text>
+					<text class="item-cond">{{ item.goodsCondition }}</text>
+				</view>
+			</view>
+		</view>
+
+		<view v-if="products.length === 0" class="empty">
+			<text class="empty-text">暂无商品</text>
+		</view>
+	</view>
+</template>
+
+<script setup>
+	import { ref } from 'vue';
+	import { request } from '@/utils/api.uts';
+
+	const products = ref([]);
+	const imageMap = ref({});
+	const keyword = ref('');
+	const curCat = ref('');
+
+	const itemImage = (id) => {
+		return imageMap.value[id] || '/static/logo.png';
+	};
+
+	const loadData = async () => {
+		try {
+			const res = await request({ url: '/product/list?page=1&size=20&category=' + curCat.value + '&keyword=' + keyword.value });
+			if (res && res.code === 200) {
+				const list = res.data || [];
+				products.value = list;
+
+				// 从数据库加载每件商品的第一张图片
+				if (list.length > 0) {
+					const ids = list.map((item) => item.id).join(',');
+					request({ url: '/image/firstByProducts?ids=' + ids }).then((imgRes) => {
+						if (imgRes && imgRes.code === 200 && imgRes.data) {
+							imageMap.value = imgRes.data;
+						}
+					});
+				}
+			}
+		} catch (e) {}
+	};
+
+	const changeCat = (cat) => {
+		curCat.value = cat === '全部' ? '' : cat;
+		loadData();
+	};
+
+	const goDetail = (id) => { uni.navigateTo({ url: '/pages/product/detail?id=' + id }); };
+	const goPublish = () => { uni.navigateTo({ url: '/pages/product/publish' }); };
+
+	loadData();
+</script>
+
+<style>
+	.page {
+		min-height: 100vh;
+		background-color: #f5f5f5;
+	}
+
+	.top-bar {
+		background-color: #ffffff;
+		padding-top: 20rpx;
+		padding-bottom: 20rpx;
+		padding-left: 30rpx;
+		padding-right: 30rpx;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.search-box {
+		flex: 1;
+	}
+
+	.search-input {
+		height: 72rpx;
+		background-color: #f5f5f5;
+		border-radius: 36rpx;
+		padding-left: 30rpx;
+		padding-right: 30rpx;
+		font-size: 28rpx;
+	}
+
+	.pub-btn {
+		margin-left: 30rpx;
+		background-color: #007AFF;
+		padding-top: 16rpx;
+		padding-bottom: 16rpx;
+		padding-left: 32rpx;
+		padding-right: 32rpx;
+		border-radius: 36rpx;
+	}
+
+	.pub-btn-text {
+		font-size: 28rpx;
+		color: #ffffff;
+	}
+
+	.tabs {
+		background-color: #ffffff;
+		padding-top: 20rpx;
+		padding-bottom: 20rpx;
+		padding-left: 30rpx;
+		padding-right: 30rpx;
+		white-space: nowrap;
+	}
+
+	.tab {
+		padding-top: 12rpx;
+		padding-bottom: 12rpx;
+		padding-left: 28rpx;
+		padding-right: 28rpx;
+		border-radius: 30rpx;
+		margin-right: 20rpx;
+		display: inline-block;
+	}
+
+	.tab.active {
+		background-color: #007AFF;
+	}
+
+	.tab-text {
+		font-size: 26rpx;
+		color: #666666;
+	}
+
+	.tab.active .tab-text {
+		color: #ffffff;
+	}
+
+	.grid {
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding-top: 20rpx;
+		padding-left: 20rpx;
+		padding-right: 20rpx;
+	}
+
+	.grid-item {
+		width: 340rpx;
+		background-color: #ffffff;
+		border-radius: 16rpx;
+		margin-right: 20rpx;
+		margin-bottom: 20rpx;
+	}
+
+	.item-img {
+		width: 340rpx;
+		height: 340rpx;
+		border-top-left-radius: 16rpx;
+		border-top-right-radius: 16rpx;
+		background-color: #f0f0f0;
+	}
+
+	.item-title {
+		font-size: 28rpx;
+		color: #333333;
+		padding-top: 16rpx;
+		padding-bottom: 8rpx;
+		padding-left: 20rpx;
+		padding-right: 20rpx;
+		lines: 1;
+	}
+
+	.item-bottom {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: 20rpx;
+		padding-right: 20rpx;
+		padding-bottom: 20rpx;
+	}
+
+	.item-price {
+		font-size: 32rpx;
+		color: #ff4d4f;
+		font-weight: bold;
+	}
+
+	.item-cond {
+		font-size: 24rpx;
+		color: #999999;
+	}
+
+	.empty {
+		padding-top: 200rpx;
+		align-items: center;
+	}
+
+	.empty-text {
+		font-size: 28rpx;
+		color: #999999;
+	}
+</style>
