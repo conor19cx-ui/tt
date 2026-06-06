@@ -16,7 +16,7 @@ public class Product {
     private String description;
     private Double price;
     private String category;
-    @TableField("goods_condition")
+    @TableField("item_condition")
     private String goodsCondition;
     private String images;
     private String contact;

@@ -83,7 +83,7 @@ INSERT INTO users (username, password, nickname, phone, student_id, college, maj
 -- 插入公告数据
 INSERT INTO notices (title, content, category, publisher, publish_time) VALUES
 ('关于2025年春季学期选课的通知', '各位同学，2025年春季学期选课将于3月1日开始，请同学们提前做好选课准备。', '教务通知', '教务处', '2025-02-20 10:00:00'),
-('图书馆开放时间调整', '为方便同学们学习，图书馆自3月1日起调整开放时间为7:00-22:00。', '通知公告', '图书馆', '2025-02-18 14:30:00'),
+('图书馆开放时间调整', '为方便同学们学习，图书馆自3月1日起调整开放时间为7:00-22:00。', '其他', '图书馆', '2025-02-18 14:30:00'),
 ('校园歌手大赛报名', '第十届校园歌手大赛现在开始报名，欢迎同学们积极参与。', '活动讲座', '学生会', '2025-02-15 09:00:00'),
 ('2024-2025学年奖学金评定', '2024-2025学年奖学金评定工作即将开始，请关注具体通知。', '奖学金', '学生处', '2025-02-10 16:00:00'),
 ('心理健康讲座', '本周五下午3点，在报告厅举办心理健康讲座，欢迎参加。', '活动讲座', '心理健康中心', '2025-02-08 11:00:00');
@@ -101,6 +101,17 @@ INSERT INTO reservations (service_type, service_name, reserve_time, location, de
 ('selfroom', '自习室预约', '2025-03-05 14:00:00', '图书馆302', '需要安静的学习环境', '13800138001', 2, '待处理'),
 ('repair', '宿舍报修', '2025-03-03 10:00:00', '3号楼301', '水龙头漏水', '13800138001', 2, '处理中'),
 ('errands', '快递代取', '2025-03-02 16:00:00', '菜鸟驿站', '取件码: 123456', '13800138001', 2, '已完成');
+
+-- 图片表
+CREATE TABLE IF NOT EXISTS images (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    url VARCHAR(500),
+    type VARCHAR(50),
+    related_id BIGINT,
+    user_id BIGINT,
+    create_time DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- 插入消息数据
 INSERT INTO messages (title, content, type, user_id, is_read) VALUES

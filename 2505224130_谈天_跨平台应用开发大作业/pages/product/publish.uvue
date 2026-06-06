@@ -64,9 +64,7 @@
 
 <script setup>
 	import { ref } from 'vue';
-	import { request, getUserInfo } from '@/utils/api.uts';
-
-	const BASE_URL = 'http://localhost:8080';
+	import { request, getUserInfo, BASE_URL } from '@/utils/api.uts';
 
 	const form = ref({ title: '', category: '', price: '', condition: '', description: '', contact: '' });
 	const images = ref([]);
@@ -97,7 +95,7 @@
 			try {
 				await new Promise((resolve, reject) => {
 					uni.uploadFile({
-						url: BASE_URL + '/api/image/upload',
+						url: BASE_URL + '/image/upload',
 						filePath: images.value[i],
 						name: 'file',
 						formData: {

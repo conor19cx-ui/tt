@@ -3,6 +3,7 @@ package com.icampus.controller;
 import com.icampus.model.Image;
 import com.icampus.service.ImageService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
@@ -16,6 +17,9 @@ public class ImageController {
 
     @Autowired
     private ImageService imageService;
+
+    @Value("${app.base-url:http://localhost:8080}")
+    private String baseUrl;
 
     @PostMapping("/upload")
     public Map<String, Object> upload(@RequestParam("file") MultipartFile file,
@@ -37,8 +41,8 @@ public class ImageController {
         // 生成新文件名
         String newFileName = UUID.randomUUID().toString().replace("-", "") + suffix;
 
-        // 保存到本地目录
-        String uploadDir = "c:/Users/35619/Desktop/icampus/static/uploads/";
+        // 保存到项目 static/uploads 目录 (相对于后端项目根目录)
+        String uploadDir = System.getProperty("user.dir") + "/../static/uploads/";
         File dir = new File(uploadDir);
         if (!dir.exists()) {
             dir.mkdirs();
@@ -48,8 +52,8 @@ public class ImageController {
             File destFile = new File(uploadDir + newFileName);
             file.transferTo(destFile);
 
-            // 保存图片信息到数据库
-            String url = "/static/uploads/" + newFileName;
+            // 保存图片信息到数据库（存储完整 URL）
+            String url = baseUrl + "/static/uploads/" + newFileName;
             imageService.saveImage(url, type, relatedId, userId);
 
             result.put("code", 200);
@@ -67,6 +71,12 @@ public class ImageController {
     public Map<String, Object> getImages(@RequestParam String type, @RequestParam Long relatedId) {
         Map<String, Object> result = new HashMap<>();
         List<Image> images = imageService.getImages(type, relatedId);
+        // 确保返回完整 URL
+        for (Image img : images) {
+            if (img.getUrl() != null && !img.getUrl().startsWith("http")) {
+                img.setUrl(baseUrl + img.getUrl());
+            }
+        }
         result.put("code", 200);
         result.put("data", images);
         return result;
@@ -82,8 +92,17 @@ public class ImageController {
             }
         }
         Map<Long, String> images = imageService.getFirstImages(idList, "product");
+        // 确保返回完整 URL
+        Map<Long, String> fullUrls = new HashMap<>();
+        for (Map.Entry<Long, String> entry : images.entrySet()) {
+            String url = entry.getValue();
+            if (url != null && !url.startsWith("http")) {
+                url = baseUrl + url;
+            }
+            fullUrls.put(entry.getKey(), url);
+        }
         result.put("code", 200);
-        result.put("data", images);
+        result.put("data", fullUrls);
         return result;
     }
 }

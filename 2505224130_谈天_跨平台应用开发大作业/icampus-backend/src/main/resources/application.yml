@@ -2,6 +2,10 @@ server:
   port: 8080
   address: 0.0.0.0
 
+app:
+  upload-dir: ../static/uploads
+  base-url: http://localhost:8080
+
 spring:
   application:
     name: icampus-backend
